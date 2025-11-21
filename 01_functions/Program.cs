@@ -2,6 +2,27 @@
 
 internal class Program
 {
+
+    string[] vragen = new string[]
+    {
+        "what 1997 n64 video game features james bond and is named after the 1995 film?",
+        "what arcade game was calles puckman in japan",
+        "Have you ever tried talking to a animal?",
+        "If you can still remember, what are your funniest childhood memories?"
+    };
+
+    internal string GetVraag(int vraagIndex)
+    {
+        return vragen[vraagIndex];
+    }
+
+    internal string GetRandomVraag()
+    {
+        Random random = new Random();
+        int randomIndex = random.Next(vragen.Length);
+        return GetVraag(randomIndex);
+    }
+
     static void Main(string[] args)              // program type: 'string'
     {
         Program Program = new Program();         // er wordt een nieuwe program aangemaakt genaamd 'run'
@@ -12,6 +33,10 @@ internal class Program
         Program.vraag4();
         Program.vraag5();
         Program.vraag6();
+        string antwoord7 = Program.vraag7();
+        Console.WriteLine(antwoord7);
+        string vraag0 = Program.GetVraag(0);
+        string vraagrandom = Program.GetRandomVraag();
                                                  // return = void
     }
 
@@ -68,6 +93,14 @@ internal class Program
         string antwoord = Console.ReadLine();
 
         Console.WriteLine(antwoord);
+    }
+
+    internal string vraag7()
+    {
+        Console.WriteLine("What secret conspiracy would you like to actually start letting other people know?");
+        string antwoord = Console.ReadLine();
+
+        return antwoord;
     }
 
 
