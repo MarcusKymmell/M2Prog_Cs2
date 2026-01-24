@@ -1,0 +1,17 @@
+[
+    {
+        "Name" :"Stoel",
+        "Description":"High quality ergonomic gaming chair",
+        "Price" :299.99
+    },
+    {
+        "Name" :"shampoo",
+        "Description":"Nat en glibberig",
+        "Price" :5.99
+    },
+    {
+        "Name" :"poep",
+        "Description":"Bruin en stinky",
+        "Price" :0.02
+    }
+]
